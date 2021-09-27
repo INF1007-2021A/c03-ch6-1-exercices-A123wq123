@@ -3,16 +3,24 @@
 
 
 def order(values: list = None) -> list:
+    liste = []
     if values is None:
-        # TODO: demander les valeurs ici
+        for i in range(10):
+            liste.append(input("Entrez une valeur:"))
         pass
+    values = liste
+    values.sort(reverse=False)
+    print(values)
+    return(values)
 
-    return []
 
 
 def anagrams(words: list = None) -> bool:
     if words is None:
         # TODO: demander les mots ici
+        premier_mot = input("Entrez un premier mot:")
+        deuxieme_mot = input("entrez un deuxième mot")
+
         pass
 
     return False
