@@ -5,8 +5,16 @@
 def order(values: list = None) -> list:
     liste = []
     if values is None:
-        for i in range(10):
-            liste.append(input("Entrez une valeur:"))
+        x = input("Écrivez a, pour des mots, b pour des chiffes entiers et c pour des chiffres à virgules:")
+        if x == "a":
+            for i in range(10):
+                liste.append(input("Entrez une valeur:"))
+        elif x == "b":
+            for i in range(10):
+                liste.append(int(input("Entrez une valeur:")))
+        elif x == "c":
+            for i in range(10):
+                liste.append(float(input("Entrez une valeur:")))
         pass
     values = liste
     values.sort(reverse=False)
