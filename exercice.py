@@ -26,16 +26,24 @@ def order(values: list = None) -> list:
 def anagrams(words: list = None) -> bool:
     if words is None:
         # TODO: demander les mots ici
-        premier_mot = input("Entrez un premier mot:")
-        deuxieme_mot = input("entrez un deuxième mot")
+        x = sorted(input("Entrer un premier mot:"))
+        y = sorted(input ("Entrez un deuxième mot:"))
 
-        pass
+        if x==y:
+            print("Ce sont des anagrammes.")
+
+        elif x != y:
+            print("Ce ne sont aps des annagrammes.")
 
     return False
 
 
 def contains_doubles(items: list) -> bool:
-    return False
+    if len(items)==len(set(items)):
+        return False
+    else:
+        return True
+
 
 
 def best_grades(student_grades: dict) -> dict:
