@@ -33,39 +33,58 @@ def anagrams(words: list = None) -> bool:
             print("Ce sont des anagrammes.")
 
         elif x != y:
-            print("Ce ne sont aps des annagrammes.")
+            print("Ce ne sont pas des annagrammes.")
 
     return False
 
 
 def contains_doubles(items: list) -> bool:
-    if len(items)==len(set(items)):
-        return False
-    else:
-        return True
+    return len(items)!=len(set(items))
 
 
 
 def best_grades(student_grades: dict) -> dict:
     # TODO: Retourner un dictionnaire contenant le nom de l'étudiant ayant la meilleure moyenne ainsi que sa moyenne
+    best_grades2 = []
+    names2 = []
+
+    best_grade = max{best_grade2}
+
     return {}
 
 
 def frequence(sentence: str) -> dict:
     # TODO: Afficher les lettres les plus fréquentes
     #       Retourner le tableau de lettres
+    letters = []
+    x = 6
 
-    return {}
+    for letters in sentence:
+        if sentence.count(letters) == x:
+            letters.append(letter)
+            x +=1
+    return print(letters)
+
 
 
 def get_recipes():
     # TODO: Demander le nom d'une recette, puis ses ingredients et enregistrer dans une structure de données
+    recette = input("Donnez-moi le nom de la recette:")
+    ingredient = input("Donnez-moi les ingredients separe par des espaces:")
+    ingredients = ingredient.split()
+
+    return {recette: ingredients}
     pass
 
 
 def print_recipe(ingredients) -> None:
     # TODO: Demander le nom d'une recette, puis l'afficher si elle existe
-    pass
+    recette = input("Donnez-moi le nom d'une recette")
+
+    if recette in recepies:
+        print(recette, ingredients)
+    else:
+        None
 
 
 def main() -> None:
